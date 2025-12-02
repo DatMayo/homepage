@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario Franze - Software Developer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="loading-screen" id="loading-screen">
+        <div class="loading-text">Initializing terminal...</div>
+        <div class="loading-bar">
+            <div class="loading-fill" id="loading-fill"></div>
+        </div>
+        <div class="loading-text" id="loading-status">Loading portfolio data...</div>
+    </div>
+    
+    <div class="terminal" id="terminal" style="display: none;">
+        <div class="terminal-header" id="terminal-header">
+            <div class="terminal-header-left">
+                <div class="terminal-buttons">
+                    <span class="btn close"></span>
+                    <span class="btn minimize"></span>
+                    <span class="btn maximize"></span>
+                </div>
+                <div class="terminal-title">mario@portfolio:~$</div>
+            </div>
+            <div class="header-controls">
+                <div class="terminal-button" id="terminal-button" title="Open Terminal Window">
+                    <span class="terminal-icon">⚡</span>
+                </div>
+                <div class="theme-toggle" id="theme-toggle" title="Toggle Dark/Light Mode">
+                    <span class="theme-icon">🌙</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Resize handles -->
+        <div class="resize-handle resize-n"></div>
+        <div class="resize-handle resize-s"></div>
+        <div class="resize-handle resize-e"></div>
+        <div class="resize-handle resize-w"></div>
+        <div class="resize-handle resize-ne"></div>
+        <div class="resize-handle resize-nw"></div>
+        <div class="resize-handle resize-se"></div>
+        <div class="resize-handle resize-sw"></div>
+        
+        <div class="terminal-body">
+            <div class="two-column-layout">
+                <!-- Left Column -->
+                <div class="left-column">
+                    <div class="prompt-line">
+                        <span class="prompt">mario@portfolio:~$</span>
+                        <span class="command">cat about.txt</span>
+                        <span class="cursor">_</span>
+                    </div>
+                    
+                    <div class="content-section" id="about">
+                        <div class="file-header">--- about.txt ---</div>
+                        <h1 class="name">Mario Franze</h1>
+                        <h2 class="title">Software Developer & IT Systems Administrator</h2>
+                        <p class="location">📍 Merseburg, Germany • <span id="age">39</span> years old</p>
+                        <p class="contact">
+                            📧 <a href="mailto:mario.franze@gmail.com">mario.franze@gmail.com</a><br>
+                            🔗 <a href="https://linkedin.com/in/mariofranze" target="_blank">LinkedIn</a><br>
+                            🐙 <a href="https://github.com/mariofranze" target="_blank">GitHub</a>
+                        </p>
+                        
+                        <div class="section">
+                            <h3>// About</h3>
+                            <p>IT Expert with extensive experience in support, system administration, and software development. Currently focused on software development with expertise in Python, Machine Learning, and automation.</p>
+                        </div>
+                    </div>
+
+                    <div class="prompt-line">
+                        <span class="prompt">mario@portfolio:~$</span>
+                        <span class="command">ls -la skills/</span>
+                    </div>
+
+                    <div class="content-section" id="skills">
+                        <div class="file-header">--- skills/ ---</div>
+                        <div class="skills-grid">
+                            <div class="skill-category">
+                                <h4>Languages</h4>
+                                <ul>
+                                    <li>Python</li>
+                                    <li>JavaScript</li>
+                                    <li>HTML/CSS</li>
+                                    <li>SQL</li>
+                                    <li>Bash</li>
+                                </ul>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Technologies</h4>
+                                <ul>
+                                    <li>RESTful APIs</li>
+                                    <li>Flask/Node.js</li>
+                                    <li>Git</li>
+                                    <li>Docker</li>
+                                    <li>Linux/Windows</li>
+                                </ul>
+                            </div>
+                            <div class="skill-category">
+                                <h4>Specialties</h4>
+                                <ul>
+                                    <li>System Administration</li>
+                                    <li>Problem Solving</li>
+                                    <li>Team Collaboration</li>
+                                    <li>Process Automation</li>
+                                    <li>Technical Support</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="right-column">
+                    <div class="prompt-line">
+                        <span class="prompt">mario@portfolio:~$</span>
+                        <span class="command">cat experience.log</span>
+                    </div>
+
+                    <div class="content-section" id="experience">
+                        <div class="file-header">--- experience.log ---</div>
+                        
+                        <div class="job">
+                            <div class="job-header">
+                                <h4>EBS Systems GmbH</h4>
+                                <span class="date">Aug 2021 - Mar 2025</span>
+                            </div>
+                            <div class="job-title">IT Administrator | Leunra</div>
+                            <ul>
+                                <li>Installation and configuration of 120+ laptops and PCs</li>
+                                <li>Maintenance and updates of existing software solutions</li>
+                                <li>Customer support handling 200+ inquiries monthly</li>
+                            </ul>
+                        </div>
+
+                        <div class="job">
+                            <div class="job-header">
+                                <h4>SST Scheueck GmbH</h4>
+                                <span class="date">Mai 2020 - Jan 2021</span>
+                            </div>
+                            <div class="job-title">Software Engineer | Merseburg</div>
+                            <ul>
+                                <li>Programming and development of proprietary software</li>
+                                <li>Configuration and repair of IT systems</li>
+                                <li>Achieved 99% system availability</li>
+                            </ul>
+                        </div>
+
+                        <div class="job">
+                            <div class="job-header">
+                                <h4>DIS Daten-IT-Service</h4>
+                                <span class="date">Mär 2017 - Apr 2020</span>
+                            </div>
+                            <div class="job-title">IT Support Specialist | Remote</div>
+                            <ul>
+                                <li>Maintenance and repair of 150+ cash register systems</li>
+                                <li>SLA-compliant troubleshooting and optimization</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="prompt-line">
+                        <span class="prompt">mario@portfolio:~$</span>
+                        <span class="command">vim contact.md</span>
+                    </div>
+
+                    <div class="content-section" id="contact">
+                        <div class="file-header">--- contact.md ---</div>
+                        <div class="contact-info">
+                            <h3>// Get In Touch</h3>
+                            <p>Interested in collaboration or have a project in mind?</p>
+                            <div class="contact-methods">
+                                <div class="contact-item">
+                                    <span class="contact-label">Email:</span>
+                                    <a href="mailto:mario.franze@gmail.com">mario.franze@gmail.com</a>
+                                </div>
+                                <div class="contact-item">
+                                    <span class="contact-label">Location:</span>
+                                    <span>Merseburg, Germany</span>
+                                </div>
+                                <div class="contact-item">
+                                    <span class="contact-label">Availability:</span>
+                                    <span class="status-available">Available for opportunities</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="final-prompt">
+                <div class="prompt-line">
+                    <span class="prompt">mario@portfolio:~$</span>
+                    <span class="command">Click ⚡ to open terminal</span>
+                    <span class="cursor blinking">_</span>
+                </div>
+            </div>
+            
+            <div class="help-panel" id="help-panel">
+                <div class="help-header">--- Available Commands ---</div>
+                <div class="help-content">
+                    <div class="help-section">
+                        <h4>Navigation:</h4>
+                        <ul>
+                            <li><code>help</code> - Show this help panel</li>
+                            <li><code>clear</code> - Clear command output</li>
+                            <li><code>theme</code> - Toggle dark/light mode</li>
+                            <li><code>ls</code> - List directory contents</li>
+                            <li><code>pwd</code> - Show current directory</li>
+                            <li><code>cd [dir]</code> - Change directory</li>
+                            <li><code>cat [file]</code> - Display file contents</li>
+                        </ul>
+                    </div>
+                    <div class="help-section">
+                        <h4>System Info:</h4>
+                        <ul>
+                            <li><code>whoami</code> - Display user info</li>
+                            <li><code>uname</code> - System information</li>
+                            <li><code>date</code> - Current date and time</li>
+                            <li><code>uptime</code> - System uptime</li>
+                            <li><code>ps</code> - Running processes</li>
+                            <li><code>top</code> - System monitor</li>
+                        </ul>
+                    </div>
+                    <div class="help-section">
+                        <h4>Networking:</h4>
+                        <ul>
+                            <li><code>ping [host]</code> - Ping a host</li>
+                            <li><code>curl [url]</code> - Fetch URL content</li>
+                            <li><code>wget [url]</code> - Download file</li>
+                            <li><code>ssh [user@host]</code> - SSH connection</li>
+                        </ul>
+                    </div>
+                    <div class="help-section">
+                        <h4>Utilities:</h4>
+                        <ul>
+                            <li><code>echo [text]</code> - Print text</li>
+                            <li><code>history</code> - Command history</li>
+                            <li><code>alias</code> - Show aliases</li>
+                            <li><code>env</code> - Environment variables</li>
+                            <li><code>which [cmd]</code> - Locate command</li>
+                        </ul>
+                    </div>
+                    <div class="help-section">
+                        <h4>Fun & Games:</h4>
+                        <ul>
+                            <li><code>cowsay [text]</code> - ASCII cow says something</li>
+                            <li><code>fortune</code> - Random programming quote</li>
+                            <li><code>matrix</code> - Toggle matrix rain</li>
+                            <li><code>sl</code> - Steam locomotive</li>
+                            <li><code>figlet [text]</code> - ASCII art text</li>
+                            <li><code>lolcat [text]</code> - Rainbow text</li>
+                        </ul>
+                    </div>
+                    <div class="help-section">
+                        <h4>Vim Commands:</h4>
+                        <ul>
+                            <li><code>:q</code> - Close terminal</li>
+                            <li><code>:w</code> - Save current state</li>
+                            <li><code>:help</code> - Show vim help</li>
+                            <li><code>:set</code> - Show settings</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Separate Terminal Window -->
+    <div class="terminal-window" id="terminal-window">
+        <div class="terminal-window-header">
+            <div class="terminal-window-header-left">
+                <div class="terminal-buttons">
+                    <span class="btn close" id="terminal-close"></span>
+                    <span class="btn minimize" id="terminal-minimize"></span>
+                    <span class="btn maximize" id="terminal-maximize"></span>
+                </div>
+                <div class="terminal-title">mario@portfolio:~$ - Interactive Terminal</div>
+            </div>
+        </div>
+        
+        <div class="terminal-window-body">
+            <div class="terminal-output" id="terminal-output">
+                <div class="welcome-message">
+                    <span class="success">Welcome to Mario's Interactive Terminal!</span>
+                    Type 'help' to see available commands or start exploring.
+                    
+                </div>
+            </div>
+            
+            <div class="command-input-section">
+                <div class="prompt-line">
+                    <span class="prompt">mario@portfolio:~$</span>
+                    <input type="text" id="command-input" class="command-input" placeholder="Type a command..." autocomplete="off" spellcheck="false">
+                    <span class="cursor blinking">_</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Terminal window resize handles -->
+        <div class="resize-handle resize-n"></div>
+        <div class="resize-handle resize-s"></div>
+        <div class="resize-handle resize-e"></div>
+        <div class="resize-handle resize-w"></div>
+        <div class="resize-handle resize-ne"></div>
+        <div class="resize-handle resize-nw"></div>
+        <div class="resize-handle resize-se"></div>
+        <div class="resize-handle resize-sw"></div>
+    </div>
+
+    <!-- Cookie Banner -->
+    <div class="cookie-banner" id="cookie-banner">
+        <div class="cookie-banner-content">
+            <div class="cookie-header">
+                <span class="cookie-icon">🍪</span>
+                <span class="cookie-title">Privacy Notice</span>
+            </div>
+            <div class="cookie-message">
+                <p><strong>Good news!</strong> This portfolio respects your privacy.</p>
+                <p>• No cookies are used for tracking<br>
+                • No personal data is collected<br>
+                • No analytics or third-party scripts<br>
+                • Only localStorage for theme preferences</p>
+            </div>
+            <div class="cookie-detailed-info" id="cookie-detailed-info">
+                <div class="detailed-info-content">
+                    <h4>🔒 No Tracking</h4>
+                    <p>• No Google Analytics or similar services<br>
+                    • No third-party tracking scripts<br>
+                    • No cookies for tracking purposes</p>
+                    
+                    <h4>💾 Local Storage Only</h4>
+                    <p>• Theme preference (dark/light mode)<br>
+                    • Session start time for uptime command<br>
+                    • Cookie banner acceptance status</p>
+                    
+                    <h4>🌐 No Data Collection</h4>
+                    <p>• No personal information stored<br>
+                    • No browsing behavior tracked<br>
+                    • No data sent to external servers</p>
+                    
+                    <h4>📊 Open Source</h4>
+                    <p>• All code is transparent<br>
+                    • No hidden functionality<br>
+                    • You can inspect everything</p>
+                </div>
+            </div>
+            
+            <div class="cookie-actions">
+                <button class="cookie-btn accept" id="cookie-accept">Got it! 👍</button>
+                <button class="cookie-btn info" id="cookie-info">
+                    <span class="info-text">More Info</span>
+                    <span class="info-arrow">▼</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
