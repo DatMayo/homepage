@@ -1543,8 +1543,7 @@ html {
 /* Improved focus states for accessibility */
 .terminal-button:focus,
 .theme-toggle:focus,
-.cookie-btn:focus,
-.command-input:focus {
+.cookie-btn:focus {
     outline: 2px solid var(--accent-primary);
     outline-offset: 2px;
 }
